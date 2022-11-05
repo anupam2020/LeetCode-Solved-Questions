@@ -1,22 +1,19 @@
 class Solution {
     public int maxPower(String s) {
         
-        int max=1;
-        for(int i=0;i<s.length();i++)
+        int max=1,count=1;
+        for(int i=0;i<s.length()-1;i++)
         {
-            int count=1;
-            for(int j=i+1;j<s.length();j++)
+            if(s.charAt(i) == s.charAt(i+1))
             {
-                if(s.charAt(i) == s.charAt(j))
-                {
-                    count++;
-                }
-                else
-                {
-                    break;
-                }
+                count++;
+                max=Math.max(max,count);
             }
-            max=Math.max(max,count);
+            else
+            {
+                count=1;
+            }
+            
         }
         
         return max;
