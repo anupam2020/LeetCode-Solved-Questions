@@ -5,9 +5,15 @@ class Solution {
             // if the current character is same as the last one in `sb`
             // then we cannot push it to `sb`
             // we remove the one in `sb`
-            if (sb.length() > 0 && sb.charAt(sb.length() - 1) == c) sb.deleteCharAt(sb.length() - 1);
+            if (sb.length() > 0 && sb.charAt(sb.length() - 1) == c) 
+            {
+                sb.deleteCharAt(sb.length() - 1);
+            }
             // otherwise, add the current character to `sb`
-            else sb.append(c);
+            else
+            {
+                sb.append(c);
+            }
         }
         return sb.toString();
     }
