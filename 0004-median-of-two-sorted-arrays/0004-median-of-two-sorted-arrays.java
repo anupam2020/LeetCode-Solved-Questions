@@ -3,18 +3,42 @@ class Solution {
         
         int nums[]=new int[nums1.length + nums2.length];
         
-        int j=0;
-        for(int i : nums1)
+        int i=0,j=0,k=0;
+        
+        while(i<nums1.length && j<nums2.length)
         {
-            nums[j++]=i;
+            if(nums1[i] < nums2[j])
+            {
+                nums[k++]=nums1[i++];
+            }
+            else
+            {
+                nums[k++]=nums2[j++];
+            }
         }
         
-        for(int i : nums2)
+        while(i<nums1.length)
         {
-            nums[j++]=i;
+            nums[k++]=nums1[i++];
         }
         
-        Arrays.sort(nums);
+        while(j<nums2.length)
+        {
+            nums[k++]=nums2[j++];
+        }
+        
+//         int j=0;
+//         for(int i : nums1)
+//         {
+//             nums[j++]=i;
+//         }
+        
+//         for(int i : nums2)
+//         {
+//             nums[j++]=i;
+//         }
+        
+        //Arrays.sort(nums);
         double median=1.0;
         if(nums.length % 2 == 0)
         {
