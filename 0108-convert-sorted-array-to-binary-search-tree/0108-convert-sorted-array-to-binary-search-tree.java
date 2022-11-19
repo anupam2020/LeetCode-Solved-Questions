@@ -26,7 +26,7 @@ class Solution {
         
         if(l>h) return null;
         
-        int mid=(l+h)/2;
+        int mid=l+(h-l)/2;
         
         TreeNode root=new TreeNode(nums[mid]);
         
