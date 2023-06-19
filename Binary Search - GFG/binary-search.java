@@ -35,7 +35,8 @@ class Solution {
         int low=0,high=n-1;
         while(low<=high)
         {
-            int mid=(high+low)/2;
+            int mid=(high+low)/2;// 1.55 sec
+            //int mid=low+(high-low)/2;// 1.93 sec
             
             if(arr[mid]==k)
             {
